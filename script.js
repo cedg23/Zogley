@@ -9,7 +9,7 @@ function cargarMain(archivo) {
     .catch(error => console.error("Error al cargar el main:", error));
 }
 
-cargarMain("main-mujer.html");
+cargarMain("/main-mujer.html");
 
 // Botones de género
 document.querySelectorAll(".btn-principales[data-group='genero']").forEach(boton => {
