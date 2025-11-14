@@ -141,7 +141,6 @@ div.hero {
   align-items: center;
   flex-direction: column;
   color: white;
-  background-image: url("Recursos/imagenes/destacado.png");
   width: 100%;
   height: 748px;
   background-size: cover; /* Hace que la imagen cubra todo el div */
@@ -351,7 +350,7 @@ button.btn-agregar {
   height: 16px;
 }
 
-#logo {
+.logo {
   width: auto;
   height: 80px;
 }
@@ -427,3 +426,31 @@ button.btn-iconos {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+
+.instagram{
+  justify-content: center;
+  width: fit-content;
+  padding: 32px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  height: 355px;
+  overflow: hidden;
+}
+
+.publicacion { 
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  height: 251px;
+  width: 251px;
+  transition: transform 1s ease;
+  
+  filter: brightness(70%);
+}
+
+.publicacion:hover {
+  transform: scale(1.05);
+  filter: brightness(100%);
+  cursor: pointer;
+}

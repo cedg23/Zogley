@@ -37,3 +37,8 @@ window.addEventListener("scroll", () => {
   }
   lastScroll = currentScroll;
 });
+
+
+const publicacion = document.getElementsByClassName('.publicacion');
+
+

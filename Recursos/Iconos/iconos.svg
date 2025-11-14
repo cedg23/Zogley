@@ -34,7 +34,7 @@
         </defs>
     </symbol>
 
-    <!-- 👤 Ícono: carrito -->
+    <!-- 🛒 Ícono: carrito -->
     <symbol id="icon-cart"  viewBox="0 0 16 16" fill="none">
         <g clip-path="url(#clip-cart)">
             <path
@@ -53,5 +53,33 @@
             </clipPath>
         </defs>
     </symbol>
+
+<symbol id="icon-arrow"  viewBox="0 0 16 16" fill="none">
+    <defs>
+    <marker id="arrow" markerWidth="5" markerHeight="5"
+            viewBox="0 0 10 10" refX="0" refY="5"
+            orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" />
+    </marker>
+  </defs>
+  <path d="M5 10 L50 90 L50 50 L90 50 L90 10"
+        stroke="black" fill="none"
+        marker-end="url(#arrow)" />
+    </symbol>
+
+
+<symbol id="icon-instagram" viewBox="0 0 34 34" fill="none">
+    <g clip-path="url(#clip-ig)">
+        <path d="M17 22.3125C19.934 22.3125 22.3125 19.934 22.3125 17C22.3125 14.066 19.934 11.6875 17 11.6875C14.066 11.6875 11.6875 14.066 11.6875 17C11.6875 19.934 14.066 22.3125 17 22.3125Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M23.375 4.25H10.625C7.10418 4.25 4.25 7.10418 4.25 10.625V23.375C4.25 26.8958 7.10418 29.75 10.625 29.75H23.375C26.8958 29.75 29.75 26.8958 29.75 23.375V10.625C29.75 7.10418 26.8958 4.25 23.375 4.25Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M23.9062 11.4219C24.6398 11.4219 25.2344 10.8273 25.2344 10.0938C25.2344 9.36025 24.6398 8.76562 23.9062 8.76562C23.1727 8.76562 22.5781 9.36025 22.5781 10.0938C22.5781 10.8273 23.1727 11.4219 23.9062 11.4219Z" fill="white"/>
+    </g>
+    <defs>
+        <clipPath id="clip-ig">
+            <rect width="34" height="34" fill="white"/>
+        </clipPath>
+    </defs>
+</symbol>
+
 
 </svg>
