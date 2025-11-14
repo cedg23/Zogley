@@ -1,0 +1,76 @@
+footer {
+    display: flex;
+    background-color: #f9f5ec;
+    padding: 40px 72px 0 72px;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+div.footer button{
+    padding: 11px 18px;
+    color: white;
+    border: none;
+    background-color: #b8725e;
+    font-weight: 400;
+    letter-spacing: 2px;
+    width: fit-content;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+div.footer button:hover{
+    background-color: #a05c4e;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+
+
+footer a{
+    color: black;
+    transition: transform 0.3s ease;
+}
+
+div.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+}
+
+div.footer-subscription
+{
+    padding: 20px  ;
+}
+
+footer input{
+    width: 100%;
+    display: flex;
+    padding: 12px 14px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+}
+
+div.footer-container a,li,ul{
+    padding: 5px 0  0 0;
+    color: #737373;
+    text-decoration: none;
+    list-style: none;
+}
+
+.footer-container {
+     padding: 20px;
+}
+
+.politicaterminos {
+    padding: 16PX;
+    gap: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.politicaterminos a{
+    text-decoration: none;
+    color: #737373;
+}
