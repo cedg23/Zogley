@@ -1,7 +1,16 @@
 /*#b8725e*/
 /*#F9F5EC*/
 
+
+* {
+  box-sizing: border-box;
+  font-family: 'Maison Neue', sans-serif;
+}
+
 h1 {
+  white-space: nowrap; /* evita que el texto haga salto de línea */
+  overflow: hidden; /* recorta texto que sobrepase */
+  text-overflow: ellipsis;
   font-size: 46px;
   font-style: normal;
   font-weight: 400;
@@ -104,6 +113,7 @@ header.oculto {
 }
 
 nav {
+  align-self: stretch;
   width: 100%;
   height: fit-content;
 
@@ -115,8 +125,7 @@ nav {
   border-bottom: 1px solid var(--200, #dddbdc);
 }
 
-nav button.btn-principales{
-
+nav button.btn-principales {
   font-weight: 400;
 }
 
@@ -187,8 +196,6 @@ div.categoria-container {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-
 .categoria img {
   object-fit: cover;
   align-self: stretch;
@@ -198,6 +205,7 @@ div.categoria-container {
 }
 
 div.sugerencias-container {
+  align-self: stretch;
   padding: 20px;
   color: white;
   height: 532px;
@@ -241,15 +249,14 @@ div.sugerencias.temporada {
   background-image: url("Recursos/imagenes/temporada.jpg");
 }
 
-
 /*tendencias*/
 div.tendencias {
-display: flex;
-flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .carrusel-tendencias {
-  margin: 0 0 20px  0;
+  margin: 0 0 20px 0;
   width: 100%;
   height: fit-content;
   display: flex;
@@ -260,7 +267,6 @@ flex-direction: row;
 .carrusel-tendencias::-webkit-scrollbar {
   height: 10px;
 }
-
 
 .carrusel-tendencias::-webkit-scrollbar-thumb {
   background-color: rgb(184, 114, 94, 0.5);
@@ -273,8 +279,6 @@ flex-direction: row;
   border-radius: 4px;
   cursor: pointer;
 }
-
-
 
 .carrusel-tendencias::-webkit-scrollbar-track {
   background-color: #f1f1f1;
@@ -303,9 +307,8 @@ flex-direction: row;
   align-items: end;
   width: 329.333px;
   height: 392px;
-  background-color: #F9F5EC;
+  background-color: #f9f5ec;
 }
-
 
 div.detalles-producto {
   display: flex;
@@ -314,12 +317,12 @@ div.detalles-producto {
   width: 100%;
 }
 
-.nombre-producto{
+.nombre-producto {
   margin: 10px 0 0 10px;
   text-align: left;
 }
 
-.precio-producto{
+.precio-producto {
   margin: 10px 10px 0 0;
   text-align: right;
 }
@@ -330,17 +333,16 @@ button.btn-agregar {
   margin-right: 15px;
   font-size: 40px;
   padding: 0;
-
 }
 
 .frase {
   margin-top: 40px;
   text-align: center;
-  display: flex; 
-  flex-direction: column; 
-  align-items: center; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  background-color: #F9F5EC;
+  background-color: #f9f5ec;
   height: 443px;
 }
 
@@ -376,7 +378,6 @@ button.btn-agregar {
   text-shadow: 0 4px 8px rgba(186, 186, 186, 0.5);
 }
 
-
 .btn-principales.activo {
   border-bottom: 4px solid #b8725e;
   color: #b8725e;
@@ -407,7 +408,7 @@ button.btn-iconos {
   white-space: nowrap;
   border: none;
   display: flex;
-  width:240px;
+  width: 240px;
   padding: 12px;
   justify-content: center;
   align-items: center;
@@ -426,27 +427,27 @@ button.btn-iconos {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-.instagram{
+.instagram {
+  align-self: stretch;
   justify-content: center;
-  width: fit-content;
-  align-items: center;
+  width: 100%;
   padding: 32px;
   display: flex;
   flex-direction: row;
   gap: 20px;
   height: 355px;
-  overflow: hidden;
+  overflow-x: hidden;
+  max-height: 100%;
 }
 
-.publicacion { 
+.publicacion {
   justify-content: center;
   align-items: center;
   background-size: cover;
   height: 251px;
   width: 251px;
   transition: transform 1s ease;
-  
+
   filter: brightness(70%);
 }
 

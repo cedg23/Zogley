@@ -1,0 +1,27 @@
+.instagram {
+  justify-content: center;
+  width: 100%;
+  padding: 32px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  height: 355px;
+  overflow-x: hidden;
+  max-height: 100%;
+}
+
+.publicacion {
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  height: 251px;
+  width: 251px;
+  transition: transform 1s ease;
+  filter: brightness(70%);
+}
+
+.publicacion:hover {
+  transform: scale(1.05);
+  filter: brightness(100%);
+  cursor: pointer;
+}

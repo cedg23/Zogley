@@ -1,0 +1,21 @@
+div.hero {
+  font-family: "Maison Neue LIGHT";
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  width: 100%;
+  height: 748px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+div.hero button:hover {
+  cursor: pointer;
+}

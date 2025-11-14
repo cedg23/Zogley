@@ -1,0 +1,68 @@
+.btn-principales {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  align-items: center;
+  color: black;
+  display: inline-flex;
+  padding: 20px 12px;
+  gap: 12px;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-principales:hover {
+  color: #b8725e;
+  cursor: pointer;
+  transform: scale(1.05);
+  text-shadow: 0 4px 8px rgba(186, 186, 186, 0.5);
+}
+
+.btn-principales.activo {
+  border-bottom: 4px solid #b8725e;
+  color: #b8725e;
+  animation: fade 0.3s ease;
+}
+
+button.btn-iconos {
+  transform: scale(1.5);
+  background-color: transparent;
+  border: none;
+  align-items: center;
+  color: black;
+  display: inline-flex;
+  padding: 20px 12px;
+  gap: 12px;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-iconos:hover {
+  color: #b8725e;
+  cursor: pointer;
+  transform: scale(1.7);
+  text-shadow: 0 4px 8px rgba(186, 186, 186, 0.5);
+}
+
+.btn-secundario {
+  white-space: nowrap;
+  border: none;
+  display: flex;
+  width: 240px;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 1.4px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-secundario:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
