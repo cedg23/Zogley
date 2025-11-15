@@ -4,7 +4,7 @@ header {
   position: sticky;
   top: 0;
   background-color: white;
-  z-index: 1000;
+  z-index: 1;
   width: 100%;
   transition: transform 0.3s ease;
 }
@@ -13,32 +13,15 @@ header.oculto {
   transform: translateY(-100%);
 }
 
-.headerSub {
-  font-weight: bold;
-  color: white;
-  background-color: black;
-  text-align: center;
-}
-
-.headerSub a {
-  font-weight: lighter;
-  font-family: Maison Neue;
-  color: white;
-}
-
 .menuContainer {
   height: min-content;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: 16px;
+  padding: 16px 16px 0 16px;
   gap: 16px;
-  border-bottom: 1px solid var(--200, #dddbdc);
-}
-
-.menuContainer > div {
-  flex-shrink: 0;
+  border-bottom: 2px solid var(--200, #dddbdc);
 }
 
 .menuContainer a {
@@ -51,18 +34,20 @@ header.oculto {
 }
 
 nav {
+  overflow-x: hidden;
   align-self: stretch;
   width: 100%;
   height: fit-content;
-
+  margin: 10px;
   font-weight: lighter;
   align-items: center;
   display: flex;
   justify-content: center;
   gap: 20px;
-  border-bottom: 1px solid var(--200, #dddbdc);
 }
 
 nav button.btn-principales {
   font-weight: 400;
+  padding: 5px;
+  font-size: 15px;
 }

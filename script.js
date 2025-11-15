@@ -24,21 +24,6 @@ document.querySelectorAll(".btn-principales[data-group='genero']").forEach(boton
   });
 });
 
-// Scroll header
-let lastScroll = 0;
-const header = document.querySelector("header");
-
-window.addEventListener("scroll", () => {
-  const currentScroll = window.scrollY;
-  if (currentScroll > lastScroll) {
-    header.classList.add("oculto");
-  } else {
-    header.classList.remove("oculto");
-  }
-  lastScroll = currentScroll;
+document.getElementById("overlay").addEventListener("click", () => {
+  document.getElementById("checkbox-carrito").checked = false;
 });
-
-
-const publicacion = document.getElementsByClassName('.publicacion');
-
-

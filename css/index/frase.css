@@ -7,4 +7,9 @@
   justify-content: center;
   background-color: #f9f5ec;
   height: 443px;
+  overflow-x: hidden;
+}
+
+.frase p{
+  font-size: 16px;
 }

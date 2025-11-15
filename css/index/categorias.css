@@ -20,7 +20,7 @@ div.categoria-container {
   align-items: center;
   gap: 12px;
   flex: 1 0 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .categoria a {
@@ -30,7 +30,6 @@ div.categoria-container {
 .categoria:hover {
   cursor: pointer;
   transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .categoria img {
@@ -40,45 +39,10 @@ div.categoria-container {
   height: 263px;
 }
 
-div.sugerencias-container {
-  align-self: stretch;
-  padding: 20px;
-  color: white;
-  height: 532px;
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-}
-
-div.sugerencias {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  flex: 1 0 0;
-  align-self: stretch;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.sugerencias:hover {
-  cursor: pointer;
-  transform: scale(1.05);
+.categoria:hover img {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-div.sugerencias.novedades {
-  background-image: url("Recursos/imagenes/novedades.jpg");
-}
 
-div.sugerencias.masVendidos {
-  background-image: url("Recursos/imagenes/masvendidos.png");
-}
 
-div.sugerencias.temporada {
-  background-image: url("Recursos/imagenes/temporada.jpg");
-}
+

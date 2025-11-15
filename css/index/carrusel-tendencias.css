@@ -1,0 +1,30 @@
+
+.carrusel-tendencias {
+  margin: 0 0 20px 0;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.carrusel-tendencias::-webkit-scrollbar {
+  height: 10px;
+}
+
+.carrusel-tendencias::-webkit-scrollbar-thumb {
+  background-color: rgb(184, 114, 94, 0.5);
+  border-radius: 4px;
+  cursor: default;
+}
+
+.carrusel-tendencias::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(184, 114, 94, 0.8);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.carrusel-tendencias::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}

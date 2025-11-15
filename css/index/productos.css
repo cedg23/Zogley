@@ -3,35 +3,6 @@ div.tendencias {
   flex-direction: row;
 }
 
-.carrusel-tendencias {
-  margin: 0 0 20px 0;
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-}
-
-.carrusel-tendencias::-webkit-scrollbar {
-  height: 10px;
-}
-
-.carrusel-tendencias::-webkit-scrollbar-thumb {
-  background-color: rgb(184, 114, 94, 0.5);
-  border-radius: 4px;
-  cursor: default;
-}
-
-.carrusel-tendencias::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(184, 114, 94, 0.8);
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.carrusel-tendencias::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
-  border-radius: 4px;
-}
 
 .producto {
   margin: 0 20px 20px;
@@ -46,8 +17,13 @@ div.tendencias {
 
 .producto:hover {
   cursor: pointer;
+  transform: scale(1.05);
+}
+
+.producto:hover .imagen-producto {
   box-shadow: 0 4px 8px rgba(184, 114, 94, 0.5);
 }
+
 
 .imagen-producto {
   display: flex;
@@ -76,9 +52,13 @@ div.detalles-producto {
 }
 
 button.btn-agregar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
   font-style: normal;
   font-weight: 400;
-  margin-right: 15px;
   font-size: 40px;
   padding: 0;
 }

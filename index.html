@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zogley</title>
     <link rel="stylesheet" href="css/index/reset.css">
-    <link rel="stylesheet" href="css/index/global.css">
     <link rel="stylesheet" href="css/index/header.css">
     <link rel="stylesheet" href="css/index/hero.css">
     <link rel="stylesheet" href="css/index/categorias.css">
@@ -16,55 +15,99 @@
     <link rel="stylesheet" href="css/index/frase.css">
     <link rel="stylesheet" href="css/index/logo.css">
     <link rel="stylesheet" href="css/index/iconos.css">
+    <link rel="stylesheet" href="css/index/tipografia.css">
     <link rel="stylesheet" href="css/index/footer.css">
-
+    <link rel="stylesheet" href="css/index/sugerencias.css">
+    <link rel="stylesheet" href="css/index/carrusel-tendencias.css">
+    <link rel="stylesheet" href="css/index/carrito.css ">
 </head>
 
 <body>
+    <label for="overlay"></label>
+    <div id="overlay"></div>
+    <!--Header -->
     <header>
-        <div class="headerSub">
-            <p>Obtén acceso anticipado a lanzamientos y ofertas. <a href="">Subscríbete Para Recibir Novedades </a></p>
-        </div>
+        <!--CONTENEDOR DEL MENÚ -->
         <div class="menuContainer">
+            <!--OPCIONES DE GÉNERO -->
             <div class="menuGenero">
                 <button class="btn-principales activo" data-group="genero">Mujer</button>
                 <button class="btn-principales" data-group="genero">Hombre</button>
             </div>
             <img class="logo" src="Recursos/imagenes/1x/LOGO ZUGLEY.png" alt="">
-            <div class="iconos-menu">
-
-                <button class="btn-iconos">
-                    <svg class="icon">
+            <!--ICONOS DEL MENÚ -->
+            <div class="submenu">
+                <!--BUSQUEDA-->
+                <button class="btn-iconos search">
+                    <svg class="iconos-submenu">
                         <use href="Recursos/Iconos/iconos.svg#icon-search"></use>
                     </svg>
                 </button>
-
-                <button class="btn-iconos">
-                    <svg class="icon">
+                <!--USUARIO-->
+                <button class="btn-iconos usuario">
+                    <svg class="iconos-submenu">
                         <use href="Recursos/Iconos/iconos.svg#icon-user"></use>
                     </svg>
                 </button>
+                <!--CARRITO-->
+                <!-- ACTIVADOR OCULTO -->
+                <input type="checkbox" id="checkbox-carrito" hidden>
 
-                <button class="btn-iconos">
-                    <svg class="icon">
+                <!-- BOTÓN QUE ACTIVA EL CHECKBOX -->
+                <label for="checkbox-carrito" class="btn-iconos carrito">
+                    <svg class="iconos-submenu">
                         <use href="Recursos/Iconos/iconos.svg#icon-cart"></use>
                     </svg>
-                </button>
+                </label>
+
             </div>
         </div>
+        <!--NAVEGACIÓN-->
         <nav>
             <button class="btn-principales" data-group="nav">Novedades</button>
             <button class="btn-principales" data-group="nav">Todos los Productos</button>
-            <button class="btn-principales" data-group="nav">Ofertas</button>
+            <button class="btn-principales" data-group="nav" style="color: red;">Ofertas</button>
             <button class="btn-principales" data-group="nav">Más Vendidos</button>
             <button class="btn-principales" data-group="nav">Swéters</button>
             <button class="btn-principales" data-group="nav">Pantalones y Jeans</button>
             <button class="btn-principales" data-group="nav">Abrigos</button>
         </nav>
     </header>
+    <!--CARRITO-->
+    <div class="contenedor-carrito">
+        <div>
+            <input type="checkbox" id="checkbox-carrito" hidden>
+            <label for="checkbox-carrito" class="btn-cerrarcarrito">
+                x
+            </label>
+            <table class="lista-carrito">
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Detalle</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="contenedor-pagar">
+            <div class="contenedor-subtotal">
+                <div class="contenedor-cantidad">
+                    <p>Subtotal</p>
+                    <span>(Cantidad)</span>
+                </div>
+                <div class="contenedor-precio">
+                    <p class="carrito-precio">Precio</p>
+                </div>
+            </div>
+
+            <button class="btn-pagar">PROCEDER AL PAGO</button>
+        </div>
+    </div>
     <main>
+        <!--Contenido principal SE CARGA DE MAIN-HOMBRE.HTML O MAIN-MUJER.HTML, REVISAR SCRIPT-->
         <div id="contenido-main">
         </div>
+        <!--SECCIÓN DE PUBLICACIONES-->
         <section>
             <div style="text-align: center; margin-top: 20px; padding: 20px;">
                 <h2>Instagram</h2>
@@ -113,6 +156,7 @@
             </div>
         </section>
     </main>
+    <!--FOOTER-->
     <footer>
         <div class="footer">
             <div class="footer-container">
@@ -181,19 +225,20 @@
                 </ul>
             </div>
             <div class="footer-subscription">
-            <h3 style="color: #b8725e; font-weight: 400;">
-                Recibe las últimas novedades
-            </h3>
-            <input type="email" placeholder="Ingresa tu correo electrónico">
-            <p style="font-weight: 400;">Al subscribirse, aceptas nuestras <a href="">Política de Privacidad y Terminos de Servicio.</a></p>
-            <button type="submit">Suscribirse</button>
-        </div>
+                <h3 style="color: #b8725e; font-weight: 400;">
+                    Recibe las últimas novedades
+                </h3>
+                <input type="email" placeholder="Ingresa tu correo electrónico">
+                <p style="font-weight: 400;">Al subscribirse, aceptas nuestras <a href="">Política de Privacidad y
+                        Terminos de Servicio.</a></p>
+                <button type="submit">Suscribirse</button>
+            </div>
         </div>
         <div class="politicaterminos">
             <a href="">Politica de Privacidad</a><a href="">Terminos y Servicio</a>
         </div>
         <div style="text-align: center; color: #737373;">© 2025 Todos los Derechos Reservados</div>
-        
+
     </footer>
     <script src="script.js"></script>
 

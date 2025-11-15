@@ -1,0 +1,31 @@
+div.sugerencias-container {
+    overflow-x: hidden;
+    align-self: stretch;
+    padding: 20px;
+    color: white;
+    height: 532px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+div.sugerencias {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  align-self: stretch;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sugerencias:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
