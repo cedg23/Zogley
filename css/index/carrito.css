@@ -1,14 +1,19 @@
-/* ─────────────── CARRITO INACTIVO ─────────────── */
+/* ───────────────────────────────────────────
+   ▶ CARRITO — ESTADO INACTIVO (POR DEFECTO)
+─────────────────────────────────────────── */
 .contenedor-carrito {
     color: #b8725e;
-    opacity: 0;                     /* Inicia oculto */
-    transform: scale(0.95);
+
+    /* inicio oculto (animable) */
+    opacity: 0;
+    transform: translateX(100%);
     pointer-events: none;
     transition: opacity .25s ease, transform .25s ease;
 
     position: fixed;
     top: 0;
     right: 0;
+
     width: 477px;
     height: 600px;
     min-height: 400px;
@@ -16,70 +21,64 @@
     display: flex;
     flex-direction: column;
     padding: 20px 0 0 0;
-    border-radius: 10px;
 
+    border-radius: 10px 0 0 10px;
     backdrop-filter: blur(15px);
     box-shadow: 6px 4px 10px rgba(0, 0, 0, 0.1);
     background-color: rgb(249 245 236 / 75%);
-    z-index: 20;
+    z-index: 1020; /* sobre el overlay */
 }
 
-.contenedor-carrito table{
+/* tabla interna */
+.contenedor-carrito table {
     margin: 10px;
     width: 100%;
 }
+
+/* ───────────────────────────────────────────
+   ▶ BOTÓN CERRAR
+─────────────────────────────────────────── */
 .btn-cerrarcarrito {
     background-color: transparent;
     font-size: 24px;
     font-weight: bold;
     color: #b8725e;
+
     cursor: pointer;
     margin-left: 10px;
     padding: 10px;
     display: inline-block;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .btn-cerrarcarrito:hover {
-    transform: scale(1.1);
-    text-shadow: 0 0 10px rgba(184, 114, 94, 0.5);
+    transform: scale(1.2);
+    text-shadow: 0 0 10px #daa89a;
 }
-/* ─────────────── SECCIÓN PAGAR ─────────────── */
+
+/* ───────────────────────────────────────────
+   ▶ SECCIÓN PAGAR (FIJA AL FONDO DEL CARRITO)
+─────────────────────────────────────────── */
 .contenedor-pagar {
-    box-shadow: 6px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 0 0 10px 10px;
     position: fixed;
+    right: 0;
     bottom: 0;
+    width: 477px;
+    box-shadow: 6px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 0 10px;
     display: flex;
     flex-direction: column;
-    width: 100%;
     gap: 20px;
     background-color: white;
     padding: 20px;
+    z-index: 1050;
 }
 
 .contenedor-cantidad {
     display: flex;
     align-items: center;
     gap: 5px;
-}
-
-
-
-.contenedor-pagar p {
-    color: #b8725e;
-    font-size: large;
-    font-weight: 600;
-}
-
-.btn-pagar {
-    font-weight: 700;
-    background-color: #b8725e;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 .contenedor-subtotal {
@@ -89,36 +88,69 @@
     width: 100%;
 }
 
-.btn-pagar:hover {
-    background-color: #a05e4a;
+.contenedor-precio {
+    text-align: right;
 }
 
-/* ─────────────── CARRITO ACTIVO ─────────────── */
+.contenedor-pagar p {
+    color: #b8725e;
+    font-size: large;
+    font-weight: 600;
+}
+
+/* botón pagar */
+.btn-pagar {
+    font-weight: 700;
+    background-color: #b8725e;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition: transform 0.5s ease,
+                box-shadow 0.5s ease,
+                backdrop-filter 0.5s ease,
+                background-color 0.5s ease;
+}
+
+.btn-pagar:hover {
+    backdrop-filter: blur(10px);
+    background-color: #ffd5ca;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #b8725e;
+    text-shadow: 0 0 10px #b8725e;
+}
+
+/* ───────────────────────────────────────────
+   ▶ OVERLAY (FONDO OSCURO)
+─────────────────────────────────────────── */
+#overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+}
+
+/* ───────────────────────────────────────────
+   ▶ CARRITO ACTIVO (CHECKBOX MARCADO)
+─────────────────────────────────────────── */
 body:has(#checkbox-carrito:checked) .contenedor-carrito {
     opacity: 1;
-    transform: scale(1);
+    transform: translateX(0);
     pointer-events: auto;
 }
 
-/* Fondo oscuro */
+/* mostrar overlay */
 body:has(#checkbox-carrito:checked) #overlay {
     display: block;
 }
 
-/* Bloquear scroll */
+/* bloquear scroll */
 body:has(#checkbox-carrito:checked) {
-}
-
-#overlay{
-    display: none;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
-    z-index: 3;
+    overflow: hidden;
 }
 
 

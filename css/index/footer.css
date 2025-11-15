@@ -6,6 +6,10 @@ footer {
     overflow-x: hidden;
 }
 
+footer h3{
+    margin: 0;
+}
+
 div.footer button{
     padding: 11px 18px;
     color: white;
@@ -14,7 +18,7 @@ div.footer button{
     font-weight: 400;
     letter-spacing: 2px;
     width: fit-content;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.5s ease, background-color 0.5s ease;
 }
 
 div.footer button:hover{
@@ -23,11 +27,13 @@ div.footer button:hover{
     transform: scale(1.05);
 }
 
-
+footer p{
+    color: black;
+}
 
 footer a{
     color: black;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
 div.footer {
@@ -52,6 +58,7 @@ footer input{
 }
 
 div.footer-container a,li,ul{
+    margin: 0;
     padding: 5px 0  0 0;
     color: #737373;
     text-decoration: none;

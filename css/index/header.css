@@ -1,14 +1,17 @@
 header {
-  display: flex;
+  display: block;
   flex-direction: column;
   position: sticky;
   top: 0;
   background-color: white;
   z-index: 1;
-  width: 100%;
-  transition: transform 0.3s ease;
+  width: 100%;  
+  transition: transform 0.5s ease;
 }
-
+.logo {
+  width: auto;
+  height: 55px;
+}
 header.oculto {
   transform: translateY(-100%);
 }
@@ -29,12 +32,13 @@ header.oculto {
   text-decoration: none;
 }
 
+
 .menuContainer a:hover {
   color: #b8725e;
 }
 
 nav {
-  overflow-x: hidden;
+  overflow: hidden;
   align-self: stretch;
   width: 100%;
   height: fit-content;

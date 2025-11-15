@@ -11,6 +11,18 @@ function cargarMain(archivo) {
 
 cargarMain("main-mujer.html");
 
+let ultimoScroll = 0;
+// Ocultar header al hacer scroll
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
+  if (window.scrollY > ultimoScroll) {
+    header.classList.add("oculto");
+  } else {
+    header.classList.remove("oculto");
+  }
+  ultimoScroll = window.scrollY;
+});
+
 // Botones de género
 document.querySelectorAll(".btn-principales[data-group='genero']").forEach(boton => {
   boton.addEventListener("click", () => {
@@ -24,6 +36,12 @@ document.querySelectorAll(".btn-principales[data-group='genero']").forEach(boton
   });
 });
 
-document.getElementById("overlay").addEventListener("click", () => {
-  document.getElementById("checkbox-carrito").checked = false;
-});
+document.getElementById("novedades").classList.add("activo");
+
+function verBarraBusqueda() {
+  document.getElementById("contenedor-busqueda").style.display = "flex";
+};
+
+  document.getElementsByTagName("nav")[0].addEventListener("mouseout", () => {
+    document.getElementById("contenedor-busqueda").style.display = "none";
+  });

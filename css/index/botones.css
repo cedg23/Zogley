@@ -8,7 +8,7 @@
   padding: 20px 12px;
   gap: 12px;
   font-weight: bold;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .btn-principales:hover {
@@ -21,7 +21,7 @@
 .btn-principales.activo {
   border-bottom: 4px solid #b8725e;
   color: #b8725e;
-  animation: fade 0.3s ease;
+  animation: fade 0.5s ease;
 }
 
 .btn-iconos {
@@ -34,7 +34,7 @@
   padding: 20px 12px;
   gap: 12px;
   font-weight: bold;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .btn-iconos:hover {
@@ -58,7 +58,7 @@
   font-style: normal;
   font-weight: 400;
   letter-spacing: 1.4px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .btn-secundario:hover {

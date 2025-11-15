@@ -4,25 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zogley</title>
-    <link rel="stylesheet" href="css/index/reset.css">
     <link rel="stylesheet" href="css/index/header.css">
-    <link rel="stylesheet" href="css/index/hero.css">
-    <link rel="stylesheet" href="css/index/categorias.css">
-    <link rel="stylesheet" href="css/products/productos.css">
-    <link rel="stylesheet" href="css/index/botones.css">
-    <link rel="stylesheet" href="css/index/instagram.css">
-    <link rel="stylesheet" href="css/index/frase.css">
-    <link rel="stylesheet" href="css/index/logo.css">
     <link rel="stylesheet" href="css/index/iconos.css">
-    <link rel="stylesheet" href="css/index/tipografia.css">
-    <link rel="stylesheet" href="css/index/footer.css">
-    <link rel="stylesheet" href="css/index/sugerencias.css">
-    <link rel="stylesheet" href="css/index/carrusel-tendencias.css">
-    <link rel="stylesheet" href="css/index/carrito.css ">
-    <link rel="stylesheet" href="css/index/overlay.css">
+    <link rel="stylesheet" href="css/index/botones.css">
     <link rel="stylesheet" href="css/index/busqueda.css">
-    <link rel="stylesheet" href="css/index/nav.css">
+    <link rel="stylesheet" href="css/index/carrito.css">
+    <link rel="stylesheet" href="css/index/reset.css">
+    <link rel="stylesheet" href="css/index/footer.css">
+    <link rel="stylesheet" href="css/products/sidebar-filtros.css">
+    <link rel="stylesheet" href="css/products/catalogo.css">
+    <link rel="stylesheet" href="css/products/productos.css">
+    <link rel="stylesheet" href="css/products/main.css">
+    <title>Productos</title>
 </head>
 
 <body>
@@ -41,7 +34,7 @@
             <!--ICONOS DEL MENÚ -->
             <div class="submenu">
                 <!--BUSQUEDA-->
-                
+
                 <input type="checkbox" id="checkbox-busqueda" hidden>
                 <label for="checkbox-busqueda" class="btn-iconos buscar" onclick="verBarraBusqueda()">
                     <svg class="iconos-submenu">
@@ -69,7 +62,7 @@
         </div>
         <div id="contenedor-busqueda">
             <input type="search" id="busqueda" placeholder="Buscar productos...">
-            <button class="btn-iconos btn-buscar" type="submit"> 
+            <button class="btn-iconos btn-buscar" type="submit">
                 <svg class="iconos-submenu">
                     <use href="Recursos/Iconos/iconos.svg#icon-search"></use>
                 </svg>
@@ -78,14 +71,141 @@
         <!--NAVEGACIÓN-->
         <nav>
             <a href="index.html"><button class="btn-principales" id="novedades">Novedades</button></a>
-            <a href="products-mujer.html"><button class="btn-principales" id="todos-productos">Todos los Productos</button></a>
+            <a href="products.html"><button class="btn-principales" id="todos-productos">Todos los
+                    Productos</button></a>
             <a href=""><button class="btn-principales" style="color: red;" id="ofertas">Ofertas</button></a>
-            <a href=""><button class="btn-principales" id="mas-vendidos">Más Vendidos</button></a> 
+            <a href=""><button class="btn-principales" id="mas-vendidos">Más Vendidos</button></a>
         </nav>
-        
+
     </header>
-    
-    <!--CARRITO-->
+    <main>
+        <aside class="sidebar-filtros">
+            <div class="contenedor-cantidad-filtros">
+                <h2>Filtros</h2>
+                <button class="btn-limpiarfiltros" onclick="limpiarFiltros()">Limpiar Filtros</button>
+            </div>
+
+            <section class="filtro">
+                <div class="filtro-categorias">
+                    <input type="checkbox" name="mostrar-tipo-filtro" id="checkbox-categorias" hidden>
+                    <div class="filtro-titulo">
+                        <h4>Categorías</h4>
+                        <label for="checkbox-categorias">+</label>
+                    </div>
+                    <div class="contenedor-categoria">
+                        <!-- Grupo Vestidos -->
+                        <input type="radio" name="categoria" id="cat-vestidos">
+                        <label for="cat-vestidos">Vestidos</label>
+
+                        <div class="sub-categoria-vestidos">
+                            <input type="radio" name="sub-vestidos" id="sub-vestidos-cortos">
+                            <label for="sub-vestidos-cortos">Vestidos Cortos</label>
+                            <input type="radio" name="sub-vestidos" id="sub-vestidos-largos">
+                            <label for="sub-vestidos-largos">Vestidos Largos</label>
+                            <input type="radio" name="sub-vestidos" id="sub-vestidos-fiesta">
+                            <label for="sub-vestidos-fiesta">Vestidos de Fiesta</label>
+                        </div>
+
+                        <!-- Grupo Tops y Blusas -->
+                        <input type="radio" name="categoria" id="cat-tops-blusas">
+                        <label for="cat-tops-blusas">Tops y Blusas</label>
+                        <div class="sub-categoria-tops-blusas">
+                            <input type="radio" name="sub-tops-blusas" id="sub-blusas">
+                            <label for="sub-blusas">Blusas</label>
+                            <input type="radio" name="sub-tops-blusas" id="sub-tops-camisetas">
+                            <label for="sub-tops-camisetas">Camisetas</label>
+                            <input type="radio" name="sub-tops-blusas" id="sub-tops-tirantes">
+                            <label for="sub-tops-tirantes">Tops y Camisetas de Tirantes</label>
+                            <input type="radio" name="sub-tops-blusas" id="sub-tops-tops">
+                            <label for="sub-tops-tops">Tops</label>
+                        </div>
+
+                        <!-- Grupo Bottoms -->
+                        <input type="radio" name="categoria" id="cat-bottoms">
+                        <label for="cat-bottoms">Bottoms</label>
+                        <div class="sub-categoria-bottoms">
+                            <input type="radio" name="sub-bottoms" id="sub-bottoms-pantalones-cortos">
+                            <label for="sub-bottoms-pantalones-cortos">Pantalones Cortos</label>
+                            <input type="radio" name="sub-bottoms" id="sub-bottoms-pantalones">
+                            <label for="sub-bottoms-pantalones">Pantalones</label>
+                            <input type="radio" name="sub-bottoms" id="sub-bottoms-leggins">
+                            <label for="sub-bottoms-leggins">Leggins</label>
+                            <input type="radio" name="sub-bottoms" id="sub-bottoms-falda">
+                            <label for="sub-bottoms-falda">Faldas</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filtro-Talla">
+                    <input type="checkbox" name="mostrar-tipo-filtro" id="checkbox-talla" hidden>
+                    <div class="filtro-titulo">
+                        <h4>Talla</h4>
+                        <label for="checkbox-talla">+</label>
+                    </div>
+                    <div class="contenedor-talla">
+                        <input type="checkbox" name="talla" id="talla-xs">
+                        <label for="talla-xs">XS</label>
+                        <input type="checkbox" name="talla" id="talla-s">
+                        <label for="talla-s">S</label>
+                        <input type="checkbox" name="talla" id="talla-m">
+                        <label for="talla-m">M</label>
+                        <input type="checkbox" name="talla" id="talla-l">
+                        <label for="talla-l">L</label>
+                        <input type="checkbox" name="talla" id="talla-xl">
+                        <label for="talla-xl">XL</label>
+                    </div>
+                </div>
+            </section>
+        </aside>
+        <section class="contenedor-productos" id="contenedor-productos"> 
+            <div class="producto">
+                    <div class="imagen-producto">
+                        <button class="btn-agregar btn-principales">+</button>
+                    </div>
+                    <div class="detalles-producto">
+                        <p class="nombre-producto" style="color: black;">Nombre</p>
+                        <p class="precio-producto" style="color: black;">Precio</p>
+                    </div>
+                </div>
+            <div class="producto">
+                    <div class="imagen-producto">
+                        <button class="btn-agregar btn-principales">+</button>
+                    </div>
+                    <div class="detalles-producto">
+                        <p class="nombre-producto" style="color: black;">Nombre</p>
+                        <p class="precio-producto" style="color: black;">Precio</p>
+                    </div>
+                </div>
+            <div class="producto">
+                    <div class="imagen-producto">
+                        <button class="btn-agregar btn-principales">+</button>
+                    </div>
+                    <div class="detalles-producto">
+                        <p class="nombre-producto" style="color: black;">Nombre</p>
+                        <p class="precio-producto" style="color: black;">Precio</p>
+                    </div>
+                </div>
+            <div class="producto">
+                    <div class="imagen-producto">
+                        <button class="btn-agregar btn-principales">+</button>
+                    </div>
+                    <div class="detalles-producto">
+                        <p class="nombre-producto" style="color: black;">Nombre</p>
+                        <p class="precio-producto" style="color: black;">Precio</p>
+                    </div>
+                </div>
+            <div class="producto">
+                    <div class="imagen-producto">
+                        <button class="btn-agregar btn-principales">+</button>
+                    </div>
+                    <div class="detalles-producto">
+                        <p class="nombre-producto" style="color: black;">Nombre</p>
+                        <p class="precio-producto" style="color: black;">Precio</p>
+                    </div>
+                </div>
+        </section>
+    </main>
+
     <div class="contenedor-carrito">
         <div>
             <input type="checkbox" id="checkbox-carrito" hidden>
@@ -115,145 +235,6 @@
             <button class="btn-pagar">PROCEDER AL PAGO</button>
         </div>
     </div>
-    <main>
-        <!--Contenido principal SE CARGA DE MAIN-HOMBRE.HTML O MAIN-MUJER.HTML, REVISAR SCRIPT-->
-        <div id="contenido-main">
-        </div>
-        <section>
-            <h3 style="color: black; text-align: start; font-size: medium; font-weight: 400; margin-left: 20px;">
-                Tendencias del momento
-                <div class="tendencias">
-            </h3>
-            <div class="carrusel-tendencias">
-                <div class="producto">
-                    <div class="imagen-producto">
-                        <button class="btn-agregar btn-principales">+</button>
-                    </div>
-                    <div class="detalles-producto">
-                        <p class="nombre-producto" style="color: black;">Nombre</p>
-                        <p class="precio-producto" style="color: black;">Precio</p>
-                    </div>
-
-                </div>
-                <div class="producto">
-                    <div class="imagen-producto">
-                        <button class="btn-agregar btn-principales">+</button>
-                    </div>
-                    <div class="detalles-producto">
-                        <p class="nombre-producto" style="color: black;">Nombre</p>
-                        <p class="precio-producto" style="color: black;">Precio</p>
-                    </div>
-
-                </div>
-                <div class="producto">
-                    <div class="imagen-producto">
-                        <button class="btn-agregar btn-principales">+</button>
-                    </div>
-                    <div class="detalles-producto">
-                        <p class="nombre-producto" style="color: black;">Nombre</p>
-                        <p class="precio-producto" style="color: black;">Precio</p>
-                    </div>
-                </div>
-                <div class="producto">
-                    <div class="imagen-producto">
-                        <button class="btn-agregar btn-principales">+</button>
-                    </div>
-                    <div class="detalles-producto">
-                        <p class="nombre-producto" style="color: black;">Nombre</p>
-                        <p class="precio-producto" style="color: black;">Precio</p>
-                    </div>
-                </div>
-                <div class="producto">
-                    <div class="imagen-producto">
-                        <button class="btn-agregar btn-principales">+</button>
-                    </div>
-                    <div class="detalles-producto">
-                        <p class="nombre-producto" style="color: black;">Nombre</p>
-                        <p class="precio-producto" style="color: black;">Precio</p>
-                    </div>
-                </div>
-                <div class="producto">
-                    <div class="imagen-producto">
-                        <button class="btn-agregar btn-principales">+</button>
-                    </div>
-                    <div class="detalles-producto">
-                        <p class="nombre-producto" style="color: black;">Nombre</p>
-                        <p class="precio-producto" style="color: black;">Precio</p>
-                    </div>
-                </div>
-                <div class="producto">
-                    <div class="imagen-producto">
-                        <button class="btn-agregar btn-principales">+</button>
-                    </div>
-                    <div class="detalles-producto">
-                        <p class="nombre-producto" style="color: black;">Nombre</p>
-                        <p class="precio-producto" style="color: black;">Precio</p>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </section>
-        <section>
-            <div class="frase">
-                <h2>El arte de elegir con propósito</h2>
-                <p style="color: black; width: 720px; font-weight: 400;" >
-                    Elegir calidad sobre cantidad es abrazar la esencia del diseño consciente.
-                    Cada prenda que creo busca trascender el tiempo, combinando materiales duraderos
-                    con una confección responsable. Mi propósito es simplificar la vida de quienes visten
-                    mis diseños y celebrar la belleza de lo auténtico, lo sostenible y lo eterno.
-                </p>
-            </div>
-        </section>
-        <!--SECCIÓN DE PUBLICACIONES-->
-        <section>
-            <div style="text-align: center; margin-top: 20px; padding: 20px;">
-                <h2>Instagram</h2>
-                <div class="instagram">
-                    <div class="publicacion" onclick="window.location.href='//www.instagram.com/zogleycouture/'"
-                        style="background-image: url('Recursos/imagenes/publicaciones/publicacion1.png');">
-                        <div class="icono-ig">
-                            <svg viewBox="0 0 34 34">
-                                <use href="Recursos/Iconos/iconos.svg#icon-instagram"></use>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="publicacion" onclick="window.location.href='//www.instagram.com/zogleycouture/'"
-                        style="background-image: url('Recursos/imagenes/publicaciones/publicacion2.png');">
-                        <div>
-                            <svg viewBox="0 0 34 34" class="icono-ig">
-                                <use href="Recursos/Iconos/iconos.svg#icon-instagram"></use>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="publicacion" onclick="window.location.href='//www.instagram.com/zogleycouture/'"
-                        style="background-image: url('Recursos/imagenes/publicaciones/publicacion3.jpg');">
-                        <div>
-                            <svg viewBox="0 0 34 34" class="icono-ig">
-                                <use href="Recursos/Iconos/iconos.svg#icon-instagram"></use>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="publicacion" onclick="window.location.href='//www.instagram.com/zogleycouture/'"
-                        style="background-image: url('Recursos/imagenes/publicaciones/publicacion4.png');">
-                        <div>
-                            <svg viewBox="0 0 34 34" class="icono-ig">
-                                <use href="Recursos/Iconos/iconos.svg#icon-instagram"></use>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="publicacion" onclick="window.location.href='//www.instagram.com/zogleycouture/'"
-                        style="background-image: url('Recursos/imagenes/publicaciones/publicacion5.png');">
-                        <div>
-                            <svg viewBox="0 0 34 34" class="icono-ig">
-                                <use href="Recursos/Iconos/iconos.svg#icon-instagram"></use>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <!--FOOTER-->
     <footer>
         <div class="footer">
             <div class="footer-container">
@@ -337,8 +318,7 @@
         <div style="text-align: center; color: #737373;">© 2025 Todos los Derechos Reservados</div>
 
     </footer>
-    <script src="scriptindex.js"></script>
-
+    <script src="scriptproducts.js"></script>
 </body>
 
 </html>

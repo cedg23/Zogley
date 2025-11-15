@@ -11,8 +11,8 @@ div.tendencias {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 329.333px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 280px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .producto:hover {
@@ -27,10 +27,10 @@ div.tendencias {
 
 .imagen-producto {
   display: flex;
+  width: 100%;
+  height: 350px;
   justify-content: end;
-  align-items: end;
-  width: 329.333px;
-  height: 392px;
+  align-items: end; 
   background-color: #f9f5ec;
 }
 
