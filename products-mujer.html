@@ -89,72 +89,23 @@
                 <div class="filtro-categorias">
                     <input type="checkbox" name="mostrar-tipo-filtro" id="checkbox-categorias" hidden>
                     <div class="filtro-titulo">
-                        <h4>Categorías</h4>
-                        <label for="checkbox-categorias">+</label>
+                        <label for="checkbox-categorias" class="label-filtro"><h4>Categorías</h4> <p>+</p></label>
                     </div>
                     <div class="contenedor-categoria">
                         <!-- Grupo Vestidos -->
-                        <input type="radio" name="categoria" id="cat-vestidos">
+                        <input type="checkbox" name="categoria" id="cat-vestidos">
                         <label for="cat-vestidos">Vestidos</label>
-
-                        <div class="sub-categoria-vestidos">
-                            <input type="radio" name="sub-vestidos" id="sub-vestidos-cortos">
-                            <label for="sub-vestidos-cortos">Vestidos Cortos</label>
-                            <input type="radio" name="sub-vestidos" id="sub-vestidos-largos">
-                            <label for="sub-vestidos-largos">Vestidos Largos</label>
-                            <input type="radio" name="sub-vestidos" id="sub-vestidos-fiesta">
-                            <label for="sub-vestidos-fiesta">Vestidos de Fiesta</label>
-                        </div>
+ 
 
                         <!-- Grupo Tops y Blusas -->
-                        <input type="radio" name="categoria" id="cat-tops-blusas">
+                        <input type="checkbox" name="categoria" id="cat-tops-blusas">
                         <label for="cat-tops-blusas">Tops y Blusas</label>
-                        <div class="sub-categoria-tops-blusas">
-                            <input type="radio" name="sub-tops-blusas" id="sub-blusas">
-                            <label for="sub-blusas">Blusas</label>
-                            <input type="radio" name="sub-tops-blusas" id="sub-tops-camisetas">
-                            <label for="sub-tops-camisetas">Camisetas</label>
-                            <input type="radio" name="sub-tops-blusas" id="sub-tops-tirantes">
-                            <label for="sub-tops-tirantes">Tops y Camisetas de Tirantes</label>
-                            <input type="radio" name="sub-tops-blusas" id="sub-tops-tops">
-                            <label for="sub-tops-tops">Tops</label>
-                        </div>
 
                         <!-- Grupo Bottoms -->
-                        <input type="radio" name="categoria" id="cat-bottoms">
+                        <input type="checkbox" name="categoria" id="cat-bottoms">
                         <label for="cat-bottoms">Bottoms</label>
-                        <div class="sub-categoria-bottoms">
-                            <input type="radio" name="sub-bottoms" id="sub-bottoms-pantalones-cortos">
-                            <label for="sub-bottoms-pantalones-cortos">Pantalones Cortos</label>
-                            <input type="radio" name="sub-bottoms" id="sub-bottoms-pantalones">
-                            <label for="sub-bottoms-pantalones">Pantalones</label>
-                            <input type="radio" name="sub-bottoms" id="sub-bottoms-leggins">
-                            <label for="sub-bottoms-leggins">Leggins</label>
-                            <input type="radio" name="sub-bottoms" id="sub-bottoms-falda">
-                            <label for="sub-bottoms-falda">Faldas</label>
-                        </div>
                     </div>
-                </div>
-
-                <div class="filtro-Talla">
-                    <input type="checkbox" name="mostrar-tipo-filtro" id="checkbox-talla" hidden>
-                    <div class="filtro-titulo">
-                        <h4>Talla</h4>
-                        <label for="checkbox-talla">+</label>
-                    </div>
-                    <div class="contenedor-talla">
-                        <input type="checkbox" name="talla" id="talla-xs">
-                        <label for="talla-xs">XS</label>
-                        <input type="checkbox" name="talla" id="talla-s">
-                        <label for="talla-s">S</label>
-                        <input type="checkbox" name="talla" id="talla-m">
-                        <label for="talla-m">M</label>
-                        <input type="checkbox" name="talla" id="talla-l">
-                        <label for="talla-l">L</label>
-                        <input type="checkbox" name="talla" id="talla-xl">
-                        <label for="talla-xl">XL</label>
-                    </div>
-                </div>
+                </div> 
             </section>
         </aside>
         <section class="contenedor-productos" id="contenedor-productos"> 
@@ -318,7 +269,7 @@
         <div style="text-align: center; color: #737373;">© 2025 Todos los Derechos Reservados</div>
 
     </footer>
-    <script src="scriptproducts.js"></script>
+    <script src="js/scriptproducts.js"></script>
 </body>
 
 </html>

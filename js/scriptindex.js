@@ -11,18 +11,6 @@ function cargarMain(archivo) {
 
 cargarMain("main-mujer.html");
 
-let ultimoScroll = 0;
-// Ocultar header al hacer scroll
-window.addEventListener("scroll", () => {
-  const header = document.querySelector("header");
-  if (window.scrollY > ultimoScroll) {
-    header.classList.add("oculto");
-  } else {
-    header.classList.remove("oculto");
-  }
-  ultimoScroll = window.scrollY;
-});
-
 // Botones de género
 document.querySelectorAll(".btn-principales[data-group='genero']").forEach(boton => {
   boton.addEventListener("click", () => {

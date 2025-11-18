@@ -1,152 +1,64 @@
+/* REGISTRO */
 
-.registro-page * {
-    box-sizing: border-box;
-}
-
-.registro-page .contenedor {
-    display: flex;
-    width: 100%;
-    height: 100vh;
-}
-
-/* FORMULARIO */
-.registro-page .formulario {
-    width: 50%;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.registro-page .Username,
-.registro-page .Useremail,
-.registro-page .UserPhone,
-.registro-page .Userpassword,
-.registro-page .Userpassword2 {
-    margin-bottom: 20px;
-}
-
-/* INPUTS */
-.registro-page input[type="text"],
-.registro-page input[type="password"] {
-    width: 100%;
-    padding: 10px 5px;
-    border: none;
-    border-bottom: 2px solid #ccc;
-    background: transparent;
-    outline: none;
-    font-size: 16px;
-    transition: 0.3s ease;
-}
-
-.registro-page input[type="text"]:focus,
-.registro-page input[type="password"]:focus {
-    border-bottom: 2px solid #000;
-}
-
-/* IMAGEN */
-.registro-page .imagenRegistrarse {
-    width: 50%;
-    height: 100%;
-}
-
-.registro-page .imagenRegistrarse img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* BOTÓN */
-.registro-page button {
-    width: 100%;
-    padding: 12px;
-    margin-top: 15px;
-    font-size: 18px;
-    border: none;
-    background: #000;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.registro-page button:hover {
-    background: #333;
-}
-
-
-/* LOGIN */
-
-
-.iniciarsesion-page * {
-    box-sizing: border-box;
-}
-
-.iniciarsesion-page .contenedor {
-    display: flex;
-    width: 100%;
-    height: 100vh;
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
 }
 
 /* FORMULARIO */
-.iniciarsesion-page .formulario {
-    width: 50%;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.formulario {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.iniciarsesion-page .Useremail,
-.iniciarsesion-page .Userpassword {
-    margin-bottom: 20px;
+.campo {
+  margin-bottom: 20px;
 }
 
 /* INPUTS */
-.iniciarsesion-page input[type="text"],
-.iniciarsesion-page input[type="password"] {
-    width: 100%;
-    padding: 10px 5px;
-    border: none;
-    border-bottom: 2px solid #ccc;
-    background: transparent;
-    outline: none;
-    font-size: 16px;
-    transition: 0.3s ease;
+input {
+  width: 100%;
+  padding: 10px 5px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+  transition: 0.3s ease;
 }
 
-.iniciarsesion-page input[type="text"]:focus,
-.iniciarsesion-page input[type="password"]:focus {
-    border-bottom: 2px solid #000;
+input:focus {
+  border-bottom: 2px solid #000;
 }
 
 /* IMAGEN */
-.iniciarsesion-page .imagenIniciarsesion {
-    width: 50%;
-    height: 100%;
-}
-
-.iniciarsesion-page .imagenIniciarsesion img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* BOTÓN */
-.iniciarsesion-page button {
-    width: 100%;
-    padding: 12px;
-    margin-top: 15px;
-    font-size: 18px;
-    border: none;
-    background: #000;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s ease;
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  font-size: 18px;
+  border: none;
+  background: #000;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-.iniciarsesion-page button:hover {
-    background: #333;
+button:hover {
+  background: #333;
 }
-

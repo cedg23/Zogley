@@ -1,72 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrate - Zogley</title>
     <link rel="stylesheet" href="css/index/reset.css">
-    <link rel="stylesheet" href="css/index/header.css">
-    <link rel="stylesheet" href="css/index/hero.css">
-    <link rel="stylesheet" href="css/index/categorias.css">
-    <link rel="stylesheet" href="css/products/productos.css">
-    <link rel="stylesheet" href="css/index/botones.css">
-    <link rel="stylesheet" href="css/index/instagram.css">
-    <link rel="stylesheet" href="css/index/frase.css">
-    <link rel="stylesheet" href="css/index/logo.css">
-    <link rel="stylesheet" href="css/index/iconos.css">
     <link rel="stylesheet" href="css/index/tipografia.css">
     <link rel="stylesheet" href="css/index/footer.css">
-    <link rel="stylesheet" href="css/index/sugerencias.css">
-    <link rel="stylesheet" href="css/index/carrusel-tendencias.css">
     <link rel="stylesheet" href="css/index/carrito.css ">
     <link rel="stylesheet" href="css/index/overlay.css">
-    <link rel="stylesheet" href="css/index/busqueda.css">
-    <link rel="stylesheet" href="css/index/nav.css">
-    <link rel="stylesheet" href="css/index/registro-login.css">
+    <link rel="stylesheet" href="css/registro-login/registro-login.css">
 </head>
 
 <body>
     <!--REGISTRO-->
-    <div class="registro-page">
-        <div class="contenedor">
-            <div id="form" class="formulario">
-                <form id="loginForm" method="post">
-                    <h1>Datos personales</h1>
+    <main>
+        <div id="form" class="formulario">
+            <form id="loginForm" method="post">
+                <h1>Datos personales</h1>
 
-                    <div class="Username">
-                        <input id="Username" type="text" required placeholder="Nombre de usuario">
-                        <div class="error"></div>
-                    </div>
+                <div class="campo">
+                    <input id="Username" type="text" required placeholder="Nombre de usuario">
+                    <div class="error"></div>
+                </div>
 
-                    <div class="Useremail">
-                        <input id="Useremail" type="text" required placeholder="Correo electrónico">
-                        <div class="error"></div>
-                    </div>
+                <div class="campo">
+                    <input id="Useremail" type="text" required placeholder="Correo electrónico">
+                    <div class="error"></div>
+                </div>
 
-                    <div class="UserPhone">
-                        <input id="phone" type="text" required placeholder="Número de teléfono">
-                        <div class="error"></div>
-                    </div>
+                <div class="campo">
+                    <input id="phone" type="text" required placeholder="Número de teléfono">
+                    <div class="error"></div>
+                </div>
 
-                    <div class="Userpassword">
-                        <input id="password" type="password" required placeholder="Contraseña">
-                        <div class="error"></div>
-                    </div>
+                <div class="campo">
+                    <input id="password" type="password" required placeholder="Contraseña">
+                    <div class="error"></div>
+                </div>
 
-                    <div class="Userpassword2">
-                        <input id="password2" type="password" required placeholder="Confirmar contraseña">
-                        <div class="error"></div>
-                    </div>
-                    <button id="registrarse" type="button">Registrarse</button>
-                </form>
-            </div>
-
-            <div class="imagenRegistrarse">
-                <img src="Recursos/imagenes/FondoimagenBackground.jpeg" width="300" height="200" alt="Imagen registro">
-            </div>
+                <div class="campo">
+                    <input id="password2" type="password" required placeholder="Confirmar contraseña">
+                    <div class="error"></div>
+                </div>
+                <button id="registrarse" type="button">Registrarse</button>
+            </form>
+            <a href="login.html" style="margin-top: 10px; color: black;">¿Ya tienes una cuenta? Inicia sesión</a>
         </div>
-    </div>
+        <img src="Recursos/imagenes/FondoimagenBackground.jpeg" alt="">
+    </main>
 
 
     <!--FOOTER-->
@@ -158,7 +141,7 @@
     </footer>
     </main>
 
-    <script src="scriptlogin-registro.js"></script>
+    <script src="js/scriptlogin-registro.js"></script>
 </body>
 
 </html>
