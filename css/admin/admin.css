@@ -1,0 +1,121 @@
+/* GRID DE TARJETAS */
+.paneles-admin {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 40px;
+}
+
+/* TARJETAS DE ESTADÍSTICAS */
+.tarjeta-estadistica {
+    background: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: 0.25s ease;
+    position: relative;
+}
+
+.tarjeta-estadistica:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* ENCABEZADO */
+.encabezado-estadistica h3 {
+    font-size: 16px;
+    font-family: "Maison Neue";
+    color: #333;
+}
+
+.icono-estadistica {
+    font-size: 24px;
+    opacity: 0.7;
+}
+
+/* NÚMEROS */
+.contenido-estadistica {
+    margin-top: 8px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.numero-estadistica {
+    font-size: 28px;
+    font-weight: 800;
+    color: #b8725e;
+}
+
+.cambio-estadistica {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.cambio-estadistica.aumento { color: #0bb25b; }
+.cambio-estadistica.disminucion { color: #d9534f; }
+
+/* MINI GRAFICA */
+.mini-grafica {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.mini-grafica img {
+    width: 30px;
+    opacity: 0.9;
+    filter: brightness(0) saturate(100%) invert(70%) sepia(12%) saturate(1500%) hue-rotate(-13deg) brightness(90%) contrast(95%);
+}
+
+/* SECCIÓN DE LA TABLA SQL */
+.contenedor-tabla-admin {
+    width: 90%;
+    margin: 30px auto;
+    background: #f1f1f1;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    padding: 20px 25px;
+    min-height: 350px;
+}
+
+/* ENCABEZADO DE TABLA */
+.encabezado-tabla {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.encabezado-tabla select {
+    padding: 18px;
+    font-size: 14px;
+    border-radius: 16px;
+    background: #f1f1f1;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    cursor: pointer;
+    font-family: "Maison Neue", sans-serif;
+    outline: none;
+    transition: transform 0.2s ease;
+}
+
+.encabezado-tabla select:hover {
+    transform: scale(1.05);
+}
+ 
+
+/* CONTENIDO DE TABLAS */
+.contenido-tabla {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    min-height: 250px;
+    border: 1px solid #ececec;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.texto-placeholder {
+    color: #777;
+    font-style: italic;
+    text-align: center;
+    margin-top: 80px;
+}

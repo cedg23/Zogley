@@ -16,8 +16,7 @@ header.oculto {
   transform: translateY(-100%);
 }
 
-.menuContainer {
-  height: min-content;
+.menuContainer { 
   display: flex;
   justify-content: space-between;
   align-items: center;

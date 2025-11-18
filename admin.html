@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/admin/admin.css">
+     <link rel="stylesheet" href="css/index/reset.css">
+    <link rel="stylesheet" href="css/index/header.css">
+    <link rel="stylesheet" href="css/index/hero.css">
+    <link rel="stylesheet" href="css/index/categorias.css">
+    <link rel="stylesheet" href="css/products/productos.css">
+    <link rel="stylesheet" href="css/index/botones.css">
+    <link rel="stylesheet" href="css/index/instagram.css">
+    <link rel="stylesheet" href="css/index/frase.css">
+    <link rel="stylesheet" href="css/index/logo.css">
+    <link rel="stylesheet" href="css/index/iconos.css">
+    <link rel="stylesheet" href="css/index/tipografia.css">
+    <link rel="stylesheet" href="css/index/footer.css">
+    <link rel="stylesheet" href="css/index/sugerencias.css">
+    <link rel="stylesheet" href="css/index/carrusel-tendencias.css">
+    <link rel="stylesheet" href="css/index/carrito.css ">
+    <link rel="stylesheet" href="css/index/overlay.css">
+    <link rel="stylesheet" href="css/index/busqueda.css">
+    <link rel="stylesheet" href="css/index/nav.css">
+</head>
+<label for="overlay"></label>
+    <div id="overlay"></div>
+    <!--Header -->
+    <header>
+        <!--CONTENEDOR DEL MENÚ -->
+        <div class="menuContainer">
+            <!--OPCIONES DE GÉNERO -->
+            <img class="logo" src="Recursos/imagenes/1x/LOGO ZUGLEY.png" alt="">
+            <h1 style="margin: 5PX;">ADMINISTRADOR</h1>
+            <!--ICONOS DEL MENÚ -->
+                <!--USUARIO-->
+                <button class="btn-iconos usuario" onclick="location.href='login.html'">
+                    <svg class="iconos-submenu">
+                        <use href="Recursos/Iconos/iconos.svg#icon-user"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+         
+        <!--NAVEGACIÓN-->
+        <nav>
+            <a href="index.html"><button class="btn-principales" id="novedades">Novedades</button></a>
+            <a href="products-mujer.html"><button class="btn-principales" id="todos-productos">Todos los Productos</button></a>
+            <a href=""><button class="btn-principales" style="color: red;" id="ofertas">Ofertas</button></a>
+            <a href=""><button class="btn-principales" id="mas-vendidos">Más Vendidos</button></a> 
+        </nav>
+        
+    </header>
+    
+    <!--CARRITO-->
+    <div class="contenedor-carrito">
+        <div>
+            <input type="checkbox" id="checkbox-carrito" hidden>
+            <label for="checkbox-carrito" class="btn-cerrarcarrito">
+                x
+            </label>
+            <table class="lista-carrito">
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Detalle</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="contenedor-pagar">
+            <div class="contenedor-subtotal">
+                <div class="contenedor-cantidad">
+                    <p>Subtotal</p>
+                    <span>(Cantidad)</span>
+                </div>
+                <div class="contenedor-precio">
+                    <p class="carrito-precio">Precio</p>
+                </div>
+            </div>
+
+            <button class="btn-pagar">PROCEDER AL PAGO</button>
+        </div>
+    </div>
+<body>
+    <main>
+<section class="paneles-admin">
+
+    <div class="tarjeta tarjeta-estadistica">
+        <div class="encabezado-estadistica">
+            <h3>Ventas Del Día</h3>
+            <span class="icono-estadistica"></span>
+        </div>
+
+        <div class="contenido-estadistica">
+            <p class="numero-estadistica">2,145</p>
+            <p class="cambio-estadistica aumento">+18%</p>
+        </div>
+
+        <div class="mini-grafica">
+            <img src="Recursos/imagenes/iconos-admin/grafico.png" alt="grafica">
+        </div>
+    </div>
+
+    <div class="tarjeta tarjeta-estadistica">
+        <div class="encabezado-estadistica">
+            <h3>Ingresos del Mes actual</h3>
+            <span class="icono-estadistica"></span>
+        </div>
+
+        <div class="contenido-estadistica">
+            <p class="numero-estadistica">€15,320</p>
+            <p class="cambio-estadistica aumento">+5%</p>
+        </div>
+
+        <div class="mini-grafica">
+            <img src="Recursos/imagenes/iconos-admin/informe-grafico.png" alt="grafica">
+        </div>
+    </div>
+
+    <div class="tarjeta tarjeta-estadistica">
+        <div class="encabezado-estadistica">
+            <h3>Usuarios Registrados</h3>
+            <span class="icono-estadistica"></span>
+        </div>
+
+        <div class="contenido-estadistica">
+            <p class="numero-estadistica">875</p>
+            <p class="cambio-estadistica aumento">+3%</p>
+        </div>
+
+        <div class="mini-grafica">
+            <img src="Recursos/imagenes/iconos-admin/grafico-de-linea.png" alt="grafica">
+        </div>
+    </div>
+
+</section>
+
+
+<section class="contenedor-tabla-admin">
+
+    <div class="encabezado-tabla tarjeta-estilo">
+        <select class="selector-tabla" style="appearance: none;">
+            <option value="ventas">Tabla de Ventas</option>
+            <option value="usuarios">Tabla de Usuarios</option>
+            <option value="productos">Tabla de Productos</option>
+        </select>
+    </div>
+
+    <div class="contenido-tabla">
+        <p class="texto-placeholder">Seleccione una tabla para visualizar los datos.</p>
+    </div>
+
+</section>
+</main>
+<footer>
+        <div class="footer">
+            <div class="footer-container">
+                <h3 style="color:#b8725e;">Cuenta</h3>
+                <ul>
+                    <li>
+                        <a href="">Iniciar Sesión</a>
+                    </li>
+                    <li>
+                        <a href="">Registrarse</a>
+                    </li>
+                    <li>
+                        <a href="">Canjear Tarjeta de Regalo</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-container">
+                <h3 style="color:#b8725e;">Compañía</h3>
+                <ul>
+                    <li>
+                        <a href="">Sobre Nosotros</a>
+                    </li>
+                    <li>
+                        <a href="">Iniciativas Medioambientales</a>
+                    </li>
+                    <li>
+                        <a href="">Empleos</a>
+                    </li>
+                    <li>
+                        <a href="">Accesibilidad</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-container">
+                <h3 style="color:#b8725e;">Ayuda</h3>
+                <ul>
+                    <li>
+                        <a href="">Centro de Ayuda</a>
+                    </li>
+                    <li>
+                        <a href="">Realizar Devolución</a>
+                    </li>
+                    <li>
+                        <a href="">Política de Devoluciones</a>
+                    </li>
+                    <li>
+                        <a href="">Información de Envío</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-container">
+                <h3 style="color:#b8725e;">Conectar</h3>
+                <ul>
+                    <li>
+                        <a href="">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="">Instagram</a>
+                    </li>
+                    <li>
+                        <a href="">Twitter</a>
+                    </li>
+                    <li>
+                        <a href="">WhatsApp</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-subscription">
+                <h3 style="color: #b8725e; font-weight: 400;">
+                    Recibe las últimas novedades
+                </h3>
+                <input type="email" placeholder="Ingresa tu correo electrónico">
+                <p style="font-weight: 400;">Al subscribirse, aceptas nuestras <a href="">Política de Privacidad y
+                        Terminos de Servicio.</a></p>
+                <button type="submit">Suscribirse</button>
+            </div>
+        </div>
+        <div class="politicaterminos">
+            <a href="">Politica de Privacidad</a><a href="">Terminos y Servicio</a>
+        </div>
+        <div style="text-align: center; color: #737373;">© 2025 Todos los Derechos Reservados</div>
+
+    </footer>
+
+</body>
+<script></script>
+</html>
